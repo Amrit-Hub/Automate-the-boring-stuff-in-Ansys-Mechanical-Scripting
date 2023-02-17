@@ -1,15 +1,15 @@
 import clr
-clr.AddReferenceToFile('MySql.Data.dll') # Namespace
+clr.AddReferenceToFileAndPath('MySql.Data.dll') # Namespace
 from MySql.Data import MySqlClient
 
-Server = 'vector'
+Server = 'tiger03957'
 Database = 'world'
 User = 'amritsql'
 Password = 'Amrit-sql876'
 connectionString = 'server={}; database={}; uid={}; pwd={}'.format(Server, Database, User, Password)
 connection = MySqlClient.MySqlConnection(connectionString)
 
-query = "select * from world.city"
+query = "select * from world.city where id = 1"
 
 # cmd = connection.CreateCommand()
 # cmd.CommandText = query
