@@ -1,5 +1,5 @@
 import clr
-clr.AddReferenceToFileAndPath('MySql.Data.dll') # Namespace
+clr.AddReferenceToFileAndPath('dll/MySql.Data.dll') # Namespace
 from MySql.Data import MySqlClient
 
 Server = 'tiger03957'
