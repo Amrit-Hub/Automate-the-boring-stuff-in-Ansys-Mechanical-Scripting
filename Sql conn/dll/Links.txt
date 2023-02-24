@@ -1,0 +1,6 @@
+https://www.nuget.org/packages/Npgsql/
+lib/net461
+https://www.nuget.org/packages/Oracle.ManagedDataAccess
+
+https://www.nuget.org/packages/MySql.Data/
+lib/net48 or lib/452
