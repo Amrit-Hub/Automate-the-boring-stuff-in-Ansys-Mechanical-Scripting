@@ -7,5 +7,7 @@ https://www.nuget.org/packages/Oracle.ManagedDataAccess
 https://www.nuget.org/packages/MySql.Data/
 USE - lib/net48 or lib/452
 
+https://system.data.sqlite.org/downloads/1.0.117.0/sqlite-netFx40-binary-bundle-x64-2010-1.0.117.0.zip
+
 postgres password method-
 change all method to 'password' in C:\Program Files\PostgreSQL\15\data\pg_hba.conf
