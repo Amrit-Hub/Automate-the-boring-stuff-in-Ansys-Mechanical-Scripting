@@ -1,11 +1,14 @@
+import sys
+sys.path.append('D:\AnsysScripting\Sql conn')
+import cred
 import clr
 clr.AddReference('System.Data') # Namespace
 from System.Data import SqlClient, ConnectionState 
 
-Server = 'TIGER03957\SQLSERVER2022'
-Database = 'dbapsqlserver'
-User = 'amritsql'
-Password = 'Amrit-sql876'
+Server = cred['personal']['sqlserver']['server']
+Database = cred['personal']['sqlserver']['database']
+User = cred['personal']['sqlserver']['username']
+Password = cred['personal']['sqlserver']['password']
 connectionString = 'Server = {}; Database = {}; Integrated Security=True; User = {}; Password = {}; Connect Timeout=10'.format(Server, Database, User, Password)
 connection = SqlClient.SqlConnection(connectionString)
 

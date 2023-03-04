@@ -1,11 +1,14 @@
+import sys
+sys.path.append('D:\AnsysScripting\Sql conn')
+import cred
 import clr
-clr.AddReferenceToFileAndPath('dll/MySql.Data.dll') # Namespace
+clr.AddReferenceToFileAndPath(r'D:\AnsysScripting\Sql conn\dll\mysql.data.8.0.32\net48\MySql.Data.dll') # Namespace
 from MySql.Data import MySqlClient
 
-Server = 'tiger03957'
-Database = 'world'
-User = 'amritsql'
-Password = 'Amrit-sql876'
+Server = cred['personal']['mysql']['server']
+Database = cred['personal']['mysql']['database']
+User = cred['personal']['mysql']['username']
+Password = cred['personal']['mysql']['password']
 connectionString = 'server={}; database={}; uid={}; pwd={}'.format(Server, Database, User, Password)
 connection = MySqlClient.MySqlConnection(connectionString)
 

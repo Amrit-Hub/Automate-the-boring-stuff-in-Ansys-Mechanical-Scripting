@@ -1,6 +1,11 @@
-https://www.nuget.org/packages/Npgsql/
-lib/net461
+https://www.nuget.org/packages/Npgsql/2.2.0 or 2.0.11
+USe - lib/net45 or lib/net40
+dont use latest version
+
 https://www.nuget.org/packages/Oracle.ManagedDataAccess
 
 https://www.nuget.org/packages/MySql.Data/
-lib/net48 or lib/452
+USE - lib/net48 or lib/452
+
+postgres password method-
+change all method to 'password' in C:\Program Files\PostgreSQL\15\data\pg_hba.conf
