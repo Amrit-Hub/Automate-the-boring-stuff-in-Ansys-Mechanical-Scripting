@@ -1,6 +1,6 @@
 import sys
-sys.path.append('D:\AnsysScripting\Sql conn')
-import cred
+sys.path.append("D:/_Common")
+from cred import cred
 import clr
 clr.AddReference('System.Data') # Namespace
 from System.Data import SqlClient, ConnectionState 

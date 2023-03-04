@@ -1,5 +1,5 @@
 import sys
-sys.path.append('D:\AnsysScripting\Sql conn')
+sys.path.append("D:/_Common")
 from cred import cred
 import clr
 clr.AddReferenceToFileAndPath(r'D:\AnsysScripting\Sql conn\dll\Npgsql3.0.5\net45\Npgsql.dll')
