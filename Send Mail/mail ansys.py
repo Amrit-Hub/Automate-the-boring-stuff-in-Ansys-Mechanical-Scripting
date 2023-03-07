@@ -17,13 +17,46 @@ if a1s.ObjectState.ToString() == 'Solved':
 else:
     sub = 'Analysis Failed!'
 
+warnings = ['warning 1', 'warning 2', 'warning 3']
+
 msg = smtp.MailMessage()
 msg.From = smtp.MailAddress(mailCred['sender'])
 msg.To.Add(smtp.MailAddress(mailCred['receiver']))
-msg.Subject = "c test email"
-msg.Body = "This is an automated message"
-# msg.CC.Add()
-# msg.IsBodyHtml = True
+msg.Subject = "Ansys Mechanical Status Update"
+
+row = ""
+for warning in warnings:
+    row = row + """
+    <tr>
+        <td>{}</td>
+    </tr>
+    """.format(warning)
+
+htmlBody = """
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+</head>
+<body>
+<h2>Service Alert</h2>
+<p>Below are the list of warnings.</p>
+<table>
+    <tr>
+        <th>Messages</th>
+    </tr>
+    %s
+</table>
+</body>
+</html>
+"""%(row)
+msg.Body = htmlBody
+msg.IsBodyHtml = True
 
 files = [a1solvefiles]  # In same directory as script
 for file in files:

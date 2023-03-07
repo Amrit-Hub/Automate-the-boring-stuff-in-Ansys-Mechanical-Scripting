@@ -6,12 +6,13 @@ import clr
 clr.AddReference('System')
 import System.Net as net
 import System.Net.Mail as smtp
+from datetime import datetime
 
 msg = smtp.MailMessage()
-msg.From = smtp.MailAddress(mailCred['sender'])
+msg.From = smtp.MailAddress(mailCred['sender'], 'Ansys Service Alert')
 msg.To.Add(smtp.MailAddress(mailCred['receiver']))
-msg.Subject = "c test email"
-msg.Body = "This is an automated message"
+msg.Subject = "Test email - {}".format(datetime.now())
+msg.Body = 'test body'
 # msg.CC.Add()
 # msg.IsBodyHtml = True
 
@@ -28,3 +29,5 @@ client = smtp.SmtpClient('smtp-mail.outlook.com', 587) # smtp.gmail.com not work
 client.EnableSsl = True
 client.Credentials = net.NetworkCredential(mailCred['sender'], mailCred['password'])
 client.Send(msg)
+msg.Dispose()
+client.Dispose()
