@@ -1,3 +1,7 @@
+import sys
+sys.path.append("D:/_Common")
+from cred import mailCred
+
 # import the smtplib module.
 import smtplib
 from email import encoders
@@ -5,8 +9,8 @@ from email.mime.text import MIMEText
 from email.mime.base import MIMEBase
 from email.mime.multipart import MIMEMultipart
 
-sender = "amrit.adb@outlook.com"
-receiver = ["amrit.referral@gmail.com"] # should be a list
+sender = mailCred['sender'] # Gmail not working
+receiver = [mailCred['receiver']] # should be a list
 
 # Create a multipart message and set headers
 msg = MIMEMultipart()
@@ -16,10 +20,10 @@ msg["Subject"] = "SMTP e-mail Test"
 body = "This is an automated message being sent by Python. Python is the mastermind behind    this."
 msg.attach(MIMEText(body, 'plain')) #msg.attach(MIMEText(html, "html"))
 
-filename = ["1.jpg", "2.jpg"]  # In same directory as script
+filename = [r"D:\AnsysScripting\Send Mail\1.jpg", r"D:\AnsysScripting\Send Mail\2.jpg"]  # In same directory as script
 
 for file in filename:
-    # Open PDF file in binary mode
+    # Open file in binary mode
     with open(file, "rb") as attachment:
         # Add file as application/octet-stream
         # Email client can usually download this automatically as attachment
@@ -30,9 +34,10 @@ for file in filename:
     encoders.encode_base64(part)
 
     # Add header as key/value pair to attachment part
+    print(file)
     part.add_header(
         "Content-Disposition",
-        "attachment; filename= %s"%file,
+        "attachment; filename= %s"%(file.split('\\')[-1]),
     )
 
     # Add attachment to message and convert message to string
@@ -42,7 +47,8 @@ for file in filename:
 # Log in to server using secure context and send email
 server = smtplib.SMTP("smtp.office365.com", 587) # smtp-mail.outlook.com, smtp.gmail.com 
 server.starttls()
-server.login("amrit.adb@outlook.com", "Sydnry#987")
+# server.connect()
+server.login(mailCred['sender'], mailCred['password'])
 print ('server working fine')
 server.sendmail(sender, receiver, msg.as_string())
 print ('sending email to outlook')
