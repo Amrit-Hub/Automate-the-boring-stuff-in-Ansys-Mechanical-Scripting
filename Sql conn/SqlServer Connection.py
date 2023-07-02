@@ -9,6 +9,7 @@ Server = cred['personal']['sqlserver']['server']
 Database = cred['personal']['sqlserver']['database']
 User = cred['personal']['sqlserver']['username']
 Password = cred['personal']['sqlserver']['password']
+
 connectionString = 'Server = {}; Database = {}; Integrated Security=True; User = {}; Password = {}; Connect Timeout=10'.format(Server, Database, User, Password)
 connection = SqlClient.SqlConnection(connectionString)
 
