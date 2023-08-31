@@ -1,0 +1,15 @@
+- System.Data Namespace
+- System.Data.SqlClient Namespace
+- ConnectionState Enum
+
+- SqlConnection Class
+- SqlConnection() Constructors
+- SqlConnection.ConnectionString Property
+- SqlConnection.CreateCommand() Method
+- SqlCommand.CommandText Property
+- SqlCommand.ExecuteReader Method
+- SqlDataReader Class
+- SqlDataReader.HasRows Property
+
+- SqlCommand Class
+- SqlCommand() Constructors

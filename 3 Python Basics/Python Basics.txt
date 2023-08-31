@@ -1,0 +1,25 @@
+Built in datatypes
+Text Type:	str
+Numeric Types:	int, float, complex
+Sequence Types:	list, tuple, range
+Mapping Type:	dict
+Boolean Type:	bool
+
+
+String:
+collection of characters
+case sensitive
+indexing
+slicing
+methods-str.find("")
+		str.split()- returns list
+		str.capitalize()
+		str.lower()
+		str.upper()
+		str.title()
+		str.strip()
+		str.replace(,)
+
+
+		
+		

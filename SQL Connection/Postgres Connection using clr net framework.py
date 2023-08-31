@@ -1,6 +1,6 @@
 import sys
-sys.path.append("D:/_Common")
-from cred import cred
+sys.path.append("D:/_Common")  # import username password credentials
+from cred import cred  # import username password credentials
 import clr
 clr.AddReferenceToFileAndPath(r'D:\AnsysScripting\Sql conn\dll\Npgsql3.0.5\net45\Npgsql.dll')
 
@@ -28,16 +28,16 @@ except Exception as e:
     print(e)
     connection.Close()
 
-# nonQuery = "insert into myschema.newtable (id) values (5)"
-# # nonQuery = "delete from dbo.tablea where id = 5"
-# cmd = Npgsql.NpgsqlCommand(nonQuery, connection)
+nonQuery = "insert into myschema.newtable (id) values (5)"
+# nonQuery = "delete from dbo.tablea where id = 5"
+cmd = Npgsql.NpgsqlCommand(nonQuery, connection)
 
-# try:
-#     connection.Open()
-#     cmd.ExecuteNonQuery()
-#     connection.Close()
-# except Exception as e:
-#     print(e)
-#     connection.Close()
+try:
+    connection.Open()
+    cmd.ExecuteNonQuery()
+    connection.Close()
+except Exception as e:
+    print(e)
+    connection.Close()
 
 

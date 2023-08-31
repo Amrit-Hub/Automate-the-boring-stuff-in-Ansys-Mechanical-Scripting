@@ -1,6 +1,6 @@
 import sys
-sys.path.append("D:/_Common")
-from cred import mailCred
+sys.path.append("D:/_Common")  # import username password credentials
+from cred import mailCred  # import username password credentials
 
 # import the smtplib module. It should be included in Python by default
 import smtplib
