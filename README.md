@@ -1,5 +1,7 @@
 # Automate the boring stuff in Ansys Mechanical #AnsysScripting #AnsysPython #Ansys
 
+[Ansys ACT reference](https://storage.ansys.com/corp/ACT_Reference_Guide_doc_v180/)
+
 ## 1 Introduction [helper](1%20Introduction/Introduction.py)
 
 [![Introduction](http://img.youtube.com/vi/ycD8B1HuQSg/0.jpg)](https://www.youtube.com/watch?v=ycD8B1HuQSg)
