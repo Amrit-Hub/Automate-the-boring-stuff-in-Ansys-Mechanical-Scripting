@@ -1,10 +1,10 @@
 # Automate the boring stuff in Ansys Mechanical #AnsysScripting #AnsysPython #Ansys
 
-## 1 Introduction
-[repo](1%20Introduction/Introduction.py)
+## 1 Introduction [helper](1%20Introduction/Introduction.py)
+
 [![Introduction](http://img.youtube.com/vi/ycD8B1HuQSg/0.jpg)](https://www.youtube.com/watch?v=ycD8B1HuQSg)
 
-## 2 Command Window & ACT Console
+## 2 Command Window & ACT Console [helper](2%20Console/Console.py)
 
 [![Command Window & ACT Console](http://img.youtube.com/vi/VGLIXkH8q3o/0.jpg)](https://www.youtube.com/watch?v=VGLIXkH8q3o)
 
