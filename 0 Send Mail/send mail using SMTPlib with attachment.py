@@ -20,7 +20,7 @@ msg["Subject"] = "SMTP e-mail Test"
 body = "This is an automated message being sent by Python. Python is the mastermind behind    this."
 msg.attach(MIMEText(body, 'plain')) #msg.attach(MIMEText(html, "html"))
 
-files = [r"C:\Users\amrit.pratihar\Documents\VSCode\AnsysMechanical\Send Mail\1.jpg", r"C:\Users\amrit.pratihar\Documents\VSCode\AnsysMechanical\Send Mail\2.jpg"]  # In same directory as script
+files = [r"C:\Users\amrit\Documents\VSCode\AnsysMechanical\Send Mail\1.jpg", r"C:\Users\amrit\Documents\VSCode\AnsysMechanical\Send Mail\2.jpg"]  # In same directory as script
 
 for file in files:
     # Open file in binary mode

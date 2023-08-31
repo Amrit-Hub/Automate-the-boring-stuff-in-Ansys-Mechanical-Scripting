@@ -18,7 +18,7 @@ msg.Body = 'test body'
 
 # msg = smtp.MailMessage(sender, ", ".join(receivers), subject, body)
 
-files = [r"C:\Users\amrit.pratihar\Documents\VSCode\AnsysMechanical\Send Mail\1.jpg", r"C:\Users\amrit.pratihar\Documents\VSCode\AnsysMechanical\Send Mail\2.jpg"]
+files = [r"C:\Users\amrit\Documents\VSCode\AnsysMechanical\Send Mail\1.jpg", r"C:\Users\amrit\Documents\VSCode\AnsysMechanical\Send Mail\2.jpg"]
 
 for file in files:
     attachment = smtp.Attachment(file)
