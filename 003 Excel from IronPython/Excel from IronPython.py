@@ -13,7 +13,7 @@ excel = Excel.ApplicationClass()
 excel.Visible = True
 
 # Read the workbook
-workbook = excel.Workbooks.Open(r"D:\AnsysScripting\0_3 Excel from IronPython\excel.xlsx")
+workbook = excel.Workbooks.Open(r"D:\AnsysScripting\003 Excel from IronPython\excel.xlsx")
 
 # Read the worksheet (Excel index starts with 1, unlike 0 in python)
 worksheet = workbook.Worksheets['Sheet1']  # Name based
@@ -32,4 +32,14 @@ for row in range(1, rowCount+1):
         print(worksheetRange.Cells[row, col].Value2, end="\t")
     print("\n")
 
+# write to worksheet
+insertRows = [5, 'ee', 555]
+for col in range(1, colCount+1):
+    worksheetRange.Cells[rowCount+1, col] = insertRows[col-1]
+
+# save workbook
+workbook.Save()
+
+# close and exit excel
 workbook.Close()
+excel.Quit()
