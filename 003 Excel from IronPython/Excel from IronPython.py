@@ -37,6 +37,10 @@ insertRows = [5, 'ee', 555]
 for col in range(1, colCount+1):
     worksheetRange.Cells[rowCount+1, col] = insertRows[col-1]
 
+# add worksheet
+newWorksheet = workbook.Worksheets.Add()
+newWorksheet.Name = "new Sheet"
+
 # save workbook
 workbook.Save()
 
