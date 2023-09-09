@@ -12,6 +12,9 @@ excel = Excel.ApplicationClass()
 # Make the excel application visible
 excel.Visible = True
 
+# add workbook
+# workbook = excel.Workbooks.Add()
+
 # Read the workbook
 workbook = excel.Workbooks.Open(r"D:\AnsysScripting\003 Excel from IronPython\excel.xlsx")
 
