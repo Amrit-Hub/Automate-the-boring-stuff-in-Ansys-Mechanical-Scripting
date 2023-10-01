@@ -9,7 +9,11 @@ Datamodel =
 'Parent', 
 'Project', 
 'Tree', 
-'WorkingDir',]
+'WorkingDir',
+'GetObjectById',
+'GetObjectByName',
+'GetObjectByType',
+]
 
 Project=
 ['Activate', 

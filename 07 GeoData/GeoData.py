@@ -11,6 +11,10 @@ GeoEntityById
 GetType
 ToString
 
+# A = body
+# B = Selection info
+# C = geo data
+
 # A to B
 Model.Geometry.Bodies[0].getgeobody()
 
