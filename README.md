@@ -1,12 +1,21 @@
-# Automate the boring stuff in Ansys Mechanical #AnsysScripting #AnsysPython #Ansys
+# | Automate the boring stuff in Ansys Mechanical |
 
-[Ansys ACT reference](https://storage.ansys.com/corp/ACT_Reference_Guide_doc_v180/)
+# | Ansys Python Scripting |
 
-## 1 Introduction [helper](1%20Introduction/Introduction.py)
+# #AnsysScripting #AnsysPython #Ansys
+
+> Useful Links-
+
+* [Ansys ACT reference](https://storage.ansys.com/corp/ACT_Reference_Guide_doc_v180/)
+* [GitHub Repo Link](https://github.com/Amrit-Hub/Automate-the-boring-stuff-in-Ansys-Mechanical-Scripting)
+
+---
+
+## 1 Introduction
 
 [![Introduction](http://img.youtube.com/vi/ycD8B1HuQSg/0.jpg)](https://www.youtube.com/watch?v=ycD8B1HuQSg)
 
-## 2 Command Window & ACT Console [helper](2%20Console/Console.py)
+## 2 Command Window & ACT Console
 
 [![Command Window & ACT Console](http://img.youtube.com/vi/VGLIXkH8q3o/0.jpg)](https://www.youtube.com/watch?v=VGLIXkH8q3o)
 
@@ -57,3 +66,27 @@
 ## 14 Connections
 
 [![Connections](http://img.youtube.com/vi/P0WwNjca1xM/0.jpg)](https://www.youtube.com/watch?v=P0WwNjca1xM)
+
+## 15 Contact Region
+
+[![Contact Region](http://img.youtube.com/vi/BPlw5_hPJvI/0.jpg)](https://www.youtube.com/watch?v=BPlw5_hPJvI)
+
+## 16 Joints
+
+[![Joints](http://img.youtube.com/vi/bzhvb4JdYR4/0.jpg)](https://www.youtube.com/watch?v=bzhvb4JdYR4)
+
+## 17 Bushing Worksheet
+
+[![Bushing Worksheet](http://img.youtube.com/vi/EqWLwHzuvxY/0.jpg)](https://www.youtube.com/watch?v=EqWLwHzuvxY)
+
+## 18 Named Selection Worksheet
+
+[![Named Selection Worksheet](http://img.youtube.com/vi/TTsR_c8Q7hY/0.jpg)](https://www.youtube.com/watch?v=TTsR_c8Q7hY)
+
+## 19 Mesh
+
+[![Mesh](http://img.youtube.com/vi/yvAvor0HQYI/0.jpg)](https://www.youtube.com/watch?v=yvAvor0HQYI)
+
+## 20 MeshData
+
+[![MeshData](http://img.youtube.com/vi/ULfu9VLe5Yk/0.jpg)](https://www.youtube.com/watch?v=ULfu9VLe5Yk)
