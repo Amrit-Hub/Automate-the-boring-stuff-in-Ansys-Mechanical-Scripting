@@ -1,6 +1,6 @@
-#### #AnsysScripting #AnsysPython #Ansys
+# Automate the boring stuff in Ansys Mechanical
 
-##### Useful Links-
+#### Useful Links-
 
 * [Ansys ACT reference](https://storage.ansys.com/corp/ACT_Reference_Guide_doc_v180/)
 * [GitHub Repo Link](https://github.com/Amrit-Hub/Automate-the-boring-stuff-in-Ansys-Mechanical-Scripting)
