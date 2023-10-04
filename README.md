@@ -6,6 +6,21 @@
 * [ACT Resources](https://github.com/Amrit-Hub/Automate-the-boring-stuff-in-Ansys-Mechanical-Scripting/tree/066c001f17c7bcebaa84da6c10dd2e30434e2cfd/000%20resources)
 
 ---
+## Utilities
+
+| Send analysis update emails from Ansys |
+|---------|
+| [![Send Email](http://img.youtube.com/vi/okAIJ1bCn-Y/0.jpg)](https://www.youtube.com/watch?v=okAIJ1bCn-Y) |
+
+---
+## Ansys & SQL Server
+
+| 1 Requirements Ansys & SQL  | 2 Data Modelling  | 3 Ansys & SQL Server  |
+| ------------- | ------------- | ------------- |
+| [![Requirements](http://img.youtube.com/vi/qq7cnxCQRJU/0.jpg)](https://www.youtube.com/watch?v=qq7cnxCQRJU)  | [![Data Modelling](http://img.youtube.com/vi/anPAasBZd6E/0.jpg)](https://www.youtube.com/watch?v=anPAasBZd6E)  | [![Ansys & SQL Server](http://img.youtube.com/vi/az5SfwL3M9A/0.jpg)](https://www.youtube.com/watch?v=az5SfwL3M9A) |
+
+---
+## Ansys Python Scripting
 
 | 1 Introduction  | 2 Command Window & ACT Console  | 3 Python Basics  |
 | ------------- | ------------- | ------------- |
