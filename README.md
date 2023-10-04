@@ -6,6 +6,7 @@
 * [ACT Resources](https://github.com/Amrit-Hub/Automate-the-boring-stuff-in-Ansys-Mechanical-Scripting/tree/066c001f17c7bcebaa84da6c10dd2e30434e2cfd/000%20resources)
 
 ---
+
 | 1 Introduction  | 2 Command Window & ACT Console  | 3 Python Basics  |
 | ------------- | ------------- | ------------- |
 | [![Introduction](http://img.youtube.com/vi/ycD8B1HuQSg/0.jpg)](https://www.youtube.com/watch?v=ycD8B1HuQSg)  | [![Command Window & ACT Console](http://img.youtube.com/vi/VGLIXkH8q3o/0.jpg)](https://www.youtube.com/watch?v=VGLIXkH8q3o)  | [![Python Basics](http://img.youtube.com/vi/BH545xRXh_k/0.jpg)](https://www.youtube.com/watch?v=BH545xRXh_k) |
