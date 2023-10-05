@@ -49,3 +49,7 @@
 | 19 Mesh | 20 MeshData | 21 Analyses & Analysis |
 | ------------- | ------------- | ------------- |
 | [![Mesh](http://img.youtube.com/vi/yvAvor0HQYI/0.jpg)](https://www.youtube.com/watch?v=yvAvor0HQYI) | [![MeshData](http://img.youtube.com/vi/ULfu9VLe5Yk/0.jpg)](https://www.youtube.com/watch?v=ULfu9VLe5Yk) | [![Analyses & Analysis](http://img.youtube.com/vi/D6uhcR0IRR8/0.jpg)](https://www.youtube.com/watch?v=D6uhcR0IRR8)
+
+| 22 Analysis Settings | |  |
+| ------------- | ------------- | ------------- |
+| [![Analysis Settings](http://img.youtube.com/vi/QbJNV_M5eko/0.jpg)](https://www.youtube.com/watch?v=QbJNV_M5eko) |  |  |
