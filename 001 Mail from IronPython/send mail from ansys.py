@@ -1,5 +1,5 @@
 import sys
-sys.path.append("path to cred.py")  # import username password credentials
+sys.path.append("path\to\cred.py")  # import username password credentials
 from cred import mailCred  # import username password credentials
 
 import clr

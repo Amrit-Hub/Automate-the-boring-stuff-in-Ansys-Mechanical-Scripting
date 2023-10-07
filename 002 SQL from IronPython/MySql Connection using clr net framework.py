@@ -1,8 +1,8 @@
 import sys
-sys.path.append("D:/_Common")  # import username password credentials
+sys.path.append("path\to\cred.py")  # import username password credentials
 from cred import cred  # import username password credentials
 import clr
-clr.AddReferenceToFileAndPath(r'D:\AnsysScripting\Sql conn\dll\mysql.data.8.0.32\net48\MySql.Data.dll') # Namespace
+clr.AddReferenceToFileAndPath(r'path\to\MySql.Data.dll') # Namespace
 from MySql.Data import MySqlClient
 
 Server = cred['personal']['mysql']['server']
@@ -12,8 +12,9 @@ Password = cred['personal']['mysql']['password']
 connectionString = 'server={}; database={}; uid={}; pwd={}'.format(Server, Database, User, Password)
 connection = MySqlClient.MySqlConnection(connectionString)
 
-query = "select * from world.city where id = 1"
+query = "select * from ansysdb.testtable"
 
+# METHOD 1
 cmd = connection.CreateCommand()
 cmd.CommandText = query
 
@@ -30,6 +31,7 @@ except Exception as e:
     print(e)
     connection.Close()
 
+# METHOD 2
 cmd = MySqlClient.MySqlCommand()
 cmd.Connection = connection
 cmd.CommandText = query
@@ -47,6 +49,7 @@ except Exception as e:
     print(e)
     connection.Close()
 
+# METHOD 3
 cmd = MySqlClient.MySqlCommand(query, connection)
 
 try:
@@ -62,8 +65,8 @@ except Exception as e:
     print(e)
     connection.Close()
 
-nonQuery = "insert into dbo.tablea (id) values (5)"
-# nonQuery = "delete from dbo.tablea where id = 5"
+nonQuery = "insert into ansysdb.testtable (id, name) values (55, 'ee')"
+# nonQuery = "delete from dbo.tablea where id = 55"
 cmd = MySqlClient.MySqlCommand(nonQuery, connection)
 
 try:

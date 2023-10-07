@@ -1,5 +1,5 @@
 import clr
-clr.AddReferenceToFileAndPath(r'D:\AnsysScripting\Sql conn\dll\sqlite-netFx40-binary-bundle-x64-2010-1.0.117.0\System.Data.SQLite.dll')
+clr.AddReferenceToFileAndPath(r'path\to\System.Data.SQLite.dll')
 import System.Data.SQLite as sqlite
 
 connection = sqlite.SQLiteConnection(r'DataSource=X:\path\to\Chinook_Sqlite.sqlite;')

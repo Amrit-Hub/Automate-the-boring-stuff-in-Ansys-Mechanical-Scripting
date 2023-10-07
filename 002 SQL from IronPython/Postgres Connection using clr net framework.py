@@ -1,8 +1,8 @@
 import sys
-sys.path.append("D:/_Common")  # import username password credentials
+sys.path.append("path\to\cred.py")   # import username password credentials
 from cred import cred  # import username password credentials
 import clr
-clr.AddReferenceToFileAndPath(r'D:\AnsysScripting\Sql conn\dll\Npgsql3.0.5\net45\Npgsql.dll')
+clr.AddReferenceToFileAndPath(r'path\to\Npgsql.dll')
 
 import Npgsql
 Server = cred['personal']['postgres']['server']

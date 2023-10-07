@@ -1,5 +1,5 @@
 import sys
-sys.path.append("D:/_Common")  # import username password credentials
+sys.path.append("path\to\cred.py")   # import username password credentials
 from cred import cred  # import username password credentials
 import clr
 clr.AddReference('System.Data') # Namespace
@@ -15,6 +15,7 @@ connection = SqlClient.SqlConnection(connectionString)
 
 query = "select * from dbo.testTable"
 
+# METHOD 1
 cmd = connection.CreateCommand()
 cmd.CommandText = query
 
@@ -31,6 +32,7 @@ except Exception as e:
     print(e)
     connection.Close()
 
+# METHOD 2
 cmd = SqlClient.SqlCommand()
 cmd.Connection = connection
 cmd.CommandText = query
@@ -48,6 +50,7 @@ except Exception as e:
     print(e)
     connection.Close()
 
+# METHOD 3
 cmd = SqlClient.SqlCommand(query, connection)
 
 try:

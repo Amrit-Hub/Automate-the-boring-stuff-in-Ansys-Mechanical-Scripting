@@ -11,42 +11,64 @@ excel = Excel.ApplicationClass()
 
 # Make the excel application visible
 excel.Visible = True
+excel.DisplayAlerts = False
 
 # add workbook
-# workbook = excel.Workbooks.Add()
+def createNewWorkbook(filepath, format):
+    if format == "xlsx":
+        wbFormat = Excel.XlFileFormat.xlWorkbookDefault
+    elif format == "csv":
+        wbFormat = Excel.XlFileFormat.xlCSV
+    workbook = excel.Workbooks.Add()
+    workbook.SaveAs(Filename = filepath, FileFormat = wbFormat, AccessMode = Excel.XlSaveAsAccessMode.xlNoChange)
+    return workbook
 
-# Read the workbook
-workbook = excel.Workbooks.Open(r"D:\AnsysScripting\003 Excel from IronPython\excel.xlsx")
+def readWorkbook(workbookPath):
+    workbook = excel.Workbooks.Open(workbookPath)
+    return workbook
 
-# Read the worksheet (Excel index starts with 1, unlike 0 in python)
-worksheet = workbook.Worksheets['Sheet1']  # Name based
-worksheet = workbook.Sheets[1] # Index based
-print(worksheet.Name)
+def readWorksheet(workbook, worksheetName = 1):
+    worksheet = workbook.Worksheets[worksheetName]
+    worksheetRange = worksheet.UsedRange
+    rowCount = worksheetRange.Rows.Count
+    colCount = worksheetRange.Columns.Count
+    print(rowCount, colCount)
+    return worksheet
 
-# Store worksheet used range
-worksheetRange = worksheet.UsedRange
-rowCount = worksheetRange.Rows.Count
-colCount = worksheetRange.Columns.Count
-# print(rowCount, colCount)
+def getHeaderIndex(worksheet, columnName):
+    worksheetRange = worksheet.UsedRange
+    for colIndex in range(1, worksheetRange.Columns.Count):
+        if worksheetRange.Cells[1, colIndex].Value2 == columnName:
+            return colIndex
 
-# print worksheet values
-for row in range(1, rowCount+1):
-    for col in range(1, colCount+1):
-        print(worksheetRange.Cells[row, col].Value2, end="\t")
-    print("\n")
+def printWorksheet(worksheet):
+    worksheetRange = worksheet.UsedRange
+    rowCount = worksheetRange.Rows.Count
+    colCount = worksheetRange.Columns.Count
+    for row in range(1, rowCount+1):
+        for col in range(1, colCount+1):
+            print(worksheetRange.Cells[row, col].Value2, end="\t")
+        print("\n")
 
-# write to worksheet
-insertRows = [5, 'ee', 555]
-for col in range(1, colCount+1):
-    worksheetRange.Cells[rowCount+1, col] = insertRows[col-1]
 
-# add worksheet
-newWorksheet = workbook.Worksheets.Add()
-newWorksheet.Name = "new Sheet"
+def insertRow(worksheet, rowList):
+    worksheetRange = worksheet.UsedRange
+    rowCount = worksheetRange.Rows.Count
+    colCount = worksheetRange.Columns.Count
+    for col in range(1, len(rowList)+1):
+        if worksheetRange.Cells[1, 1].Value2 == "":
+            worksheetRange.Cells[1, col] = rowList[col-1]
+        else:
+            worksheetRange.Cells[rowCount+1, col] = rowList[col-1]
 
-# save workbook
-workbook.Save()
+def exitWorkbook(workbook):
+    workbook.Save()
+    workbook.Close()
+    excel.Quit()
 
-# close and exit excel
-workbook.Close()
-excel.Quit()
+
+# createNewWorkbook(r"D:\AnsysScripting\003 Excel from IronPython\ansys", "xlsx")
+wb = readWorkbook(r"D:\AnsysScripting\003 Excel from IronPython\ansys.xlsx")
+ws = readWorksheet(wb)
+insertRow(ws, ['1', 'aa'])
+exitWorkbook(wb)
