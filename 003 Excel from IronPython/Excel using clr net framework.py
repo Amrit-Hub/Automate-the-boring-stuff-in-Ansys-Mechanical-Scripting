@@ -32,7 +32,7 @@ def readWorksheet(workbook, worksheetName = 1):
     worksheetRange = worksheet.UsedRange
     rowCount = worksheetRange.Rows.Count
     colCount = worksheetRange.Columns.Count
-    print(rowCount, colCount)
+    # print(rowCount, colCount)
     return worksheet
 
 def getHeaderIndex(worksheet, columnName):
@@ -66,9 +66,18 @@ def exitWorkbook(workbook):
     workbook.Close()
     excel.Quit()
 
+def createTableFromRange(worksheet, tableName, tableStyleName = "TableStyleMedium2"):
+    worksheet.ListObjects.Add(SourceType = Excel.XlListObjectSourceType.xlSrcRange, Source = worksheet.UsedRange, XlListObjectHasHeaders = Excel.XlYesNoGuess.xlYes).Name = tableName
+    worksheet.ListObjects[tableName].TableStyle = tableStyleName
 
-# createNewWorkbook(r"D:\AnsysScripting\003 Excel from IronPython\ansys", "xlsx")
-wb = readWorkbook(r"D:\AnsysScripting\003 Excel from IronPython\ansys.xlsx")
-ws = readWorksheet(wb)
-insertRow(ws, ['1', 'aa'])
-exitWorkbook(wb)
+try:
+    # createNewWorkbook(r"D:\AnsysScripting\003 Excel from IronPython\ansys", "xlsx")
+    wb = readWorkbook(r"D:\AnsysScripting\003 Excel from IronPython\ansys.xlsx")
+    ws = readWorksheet(wb)
+    # insertRow(ws, ['1', 'aa'])
+    # printWorksheet(ws)
+    # createTableFromRange(ws, "Table1")
+    # print(ws.ListObjects["Table1"].ListRows)
+    exitWorkbook(wb)
+except:
+    exitWorkbook(wb)
