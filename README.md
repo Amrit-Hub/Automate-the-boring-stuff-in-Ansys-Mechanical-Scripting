@@ -53,3 +53,43 @@
 | 22 Analysis Settings | 23 Multi Step Load |  |
 | ------------- | ------------- | ------------- |
 | [![Analysis Settings](http://img.youtube.com/vi/QbJNV_M5eko/0.jpg)](https://www.youtube.com/watch?v=QbJNV_M5eko) | [![Multi Step Load](http://img.youtube.com/vi/Aq_yQN9r5eA/0.jpg)](https://www.youtube.com/watch?v=Aq_yQN9r5eA) |  |
+
+---
+## [Important] clr module
+In IronPython, `clr` is a module allows which you to work with .NET assemblies and interact with .NET objects. `clr.AddReference`, `clr.AddReferenceToFile`, and `clr.AddReferenceToFileAndPath` are methods provided by `clr` to add references to .NET assemblies. The choice of which method to use depends on your specific requirements and the location of the assembly you want to reference.
+
+1. `clr.AddReference(assembly_name)`: This method is used to add a reference to a .NET assembly by its name. It's often used when the assembly is already in the Global Assembly Cache (GAC) or is available in the current application domain. Here's an example:
+
+```python
+import clr
+clr.AddReference("System.Windows.Forms")
+
+# Now you can use classes from the System.Windows.Forms assembly
+import System.Windows.Forms
+form = System.Windows.Forms.Form()
+```
+
+2. `clr.AddReferenceToFile(assembly_file)`: This method is used when you have the assembly file (DLL) available locally, and you want to reference it by specifying the file path. Here's an example:
+
+```python
+import clr
+clr.AddReferenceToFile("C:/Path/To/Assemblies/MyAssembly.dll")
+
+# Now you can use classes from the MyAssembly assembly
+import MyNamespace
+my_instance = MyNamespace.MyClass()
+```
+
+3. `clr.AddReferenceToFileAndPath(assembly_file, search_paths)`: This method is similar to `clr.AddReferenceToFile`, but it allows you to specify a list of directories to search for the assembly. This can be useful when the assembly is not in the current working directory, and you want to specify additional search paths. Here's an example:
+
+```python
+import clr
+search_paths = ["C:/Path/To/Assemblies", "D:/Another/Path"]
+clr.AddReferenceToFileAndPath("MyAssembly.dll", search_paths)
+
+# Now you can use classes from the MyAssembly assembly
+import MyNamespace
+my_instance = MyNamespace.MyClass()
+```
+
+In summary, use `clr.AddReference` when the assembly is in the GAC or the current application domain, `clr.AddReferenceToFile` when you have the assembly file locally, and `clr.AddReferenceToFileAndPath` when you have the assembly file but need to specify additional search paths. The choice depends on the availability and location of the assembly you want to reference in your Python code.

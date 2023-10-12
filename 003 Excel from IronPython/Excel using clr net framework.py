@@ -61,6 +61,10 @@ def insertRow(worksheet, rowList):
         else:
             worksheetRange.Cells[rowCount+1, col] = rowList[col-1]
 
+def deleteRow(worsheet, rowIndex):
+    rowRange = worsheet.Rows[rowIndex]
+    rowRange.Delete()
+
 def exitWorkbook(workbook):
     workbook.Save()
     workbook.Close()
@@ -70,6 +74,11 @@ def createTableFromRange(worksheet, tableName, tableStyleName = "TableStyleMediu
     worksheet.ListObjects.Add(SourceType = Excel.XlListObjectSourceType.xlSrcRange, Source = worksheet.UsedRange, XlListObjectHasHeaders = Excel.XlYesNoGuess.xlYes).Name = tableName
     worksheet.ListObjects[tableName].TableStyle = tableStyleName
 
+
+# tableRange = ws.ListObjects["Table1"].Range
+# tableRowCount = tableRange.Rows.Count
+# tableColumnCount = tableRange.Columns.Count
+
 try:
     # createNewWorkbook(r"D:\AnsysScripting\003 Excel from IronPython\ansys", "xlsx")
     wb = readWorkbook(r"D:\AnsysScripting\003 Excel from IronPython\ansys.xlsx")
@@ -77,7 +86,14 @@ try:
     # insertRow(ws, ['1', 'aa'])
     # printWorksheet(ws)
     # createTableFromRange(ws, "Table1")
-    # print(ws.ListObjects["Table1"].ListRows)
-    exitWorkbook(wb)
+    table = ws.ListObjects["AnsysTable"]
+    rows = table.ListRows
+    id_column = table.ListColumns["id"]
+    for row in rows:
+        print(row.Range[1].Value2)
+    # exitWorkbook(wb)
+    pass
 except:
-    exitWorkbook(wb)
+    pass
+    # exitWorkbook(wb)
+
