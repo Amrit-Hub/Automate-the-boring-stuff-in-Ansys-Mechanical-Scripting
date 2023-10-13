@@ -20,7 +20,14 @@
 | [![Requirements](http://img.youtube.com/vi/qq7cnxCQRJU/0.jpg)](https://www.youtube.com/watch?v=qq7cnxCQRJU)  | [![Data Modelling](http://img.youtube.com/vi/anPAasBZd6E/0.jpg)](https://www.youtube.com/watch?v=anPAasBZd6E)  | [![Ansys & SQL Server](http://img.youtube.com/vi/az5SfwL3M9A/0.jpg)](https://www.youtube.com/watch?v=az5SfwL3M9A) |
 
 ---
-## Ansys Python Scripting
+## Ansys & Excel
+
+| 1 Excel  | 2 Excel SQL Query |
+| ------------- | ------------- |
+| [![Excel](http://img.youtube.com/vi/NNLYE-NCKZU/0.jpg)](https://www.youtube.com/watch?v=NNLYE-NCKZU)  | |
+
+---
+## Ansys Python Scripting Tutorials
 
 | 1 Introduction  | 2 Command Window & ACT Console  | 3 Python Basics  |
 | ------------- | ------------- | ------------- |
