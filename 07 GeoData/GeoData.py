@@ -4,6 +4,7 @@
 ExtAPI.DataModel.Project.Model.Analyses[0].GeoData
 ExtAPI.DataModel.GeoData
 ExtAPI.DataModel.AnalysisList[0].GeoData
+selinfo = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
 
 # methods/prop with geodata gd
 Assemblies
@@ -16,10 +17,10 @@ ToString
 # C = geo data
 
 # A to B
-Model.Geometry.Bodies[0].getgeobody()
+Model.Geometry.Children[0].GetGeoBody()
 
 # B to C
-selinfo.Ids = bodygeodata.Id
+selinfo.Ids = [bodygeodata.Id]
 
 # C to B
 gd.geoentitybyid(int from selinfo)

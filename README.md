@@ -15,7 +15,7 @@
 ---
 ## Ansys & SQL Server
 
-| 1 Requirements Ansys & SQL  | 2 Data Modelling  | 3 Ansys & SQL Server  |
+| 1 Requirements SQL | 2 Data Modelling  | 3 Ansys + SQL Server  |
 | ------------- | ------------- | ------------- |
 | [![Requirements](http://img.youtube.com/vi/qq7cnxCQRJU/0.jpg)](https://www.youtube.com/watch?v=qq7cnxCQRJU)  | [![Data Modelling](http://img.youtube.com/vi/anPAasBZd6E/0.jpg)](https://www.youtube.com/watch?v=anPAasBZd6E)  | [![Ansys & SQL Server](http://img.youtube.com/vi/az5SfwL3M9A/0.jpg)](https://www.youtube.com/watch?v=az5SfwL3M9A) |
 
@@ -57,9 +57,9 @@
 | ------------- | ------------- | ------------- |
 | [![Mesh](http://img.youtube.com/vi/yvAvor0HQYI/0.jpg)](https://www.youtube.com/watch?v=yvAvor0HQYI) | [![MeshData](http://img.youtube.com/vi/ULfu9VLe5Yk/0.jpg)](https://www.youtube.com/watch?v=ULfu9VLe5Yk) | [![Analyses & Analysis](http://img.youtube.com/vi/D6uhcR0IRR8/0.jpg)](https://www.youtube.com/watch?v=D6uhcR0IRR8)
 
-| 22 Analysis Settings | 23 Multi Step Load |  |
+| 22 Analysis Settings | 23 Multi Step Load | 24 Multi Step Load |
 | ------------- | ------------- | ------------- |
-| [![Analysis Settings](http://img.youtube.com/vi/QbJNV_M5eko/0.jpg)](https://www.youtube.com/watch?v=QbJNV_M5eko) | [![Multi Step Load](http://img.youtube.com/vi/Aq_yQN9r5eA/0.jpg)](https://www.youtube.com/watch?v=Aq_yQN9r5eA) |  |
+| [![Analysis Settings](http://img.youtube.com/vi/QbJNV_M5eko/0.jpg)](https://www.youtube.com/watch?v=QbJNV_M5eko) | [![Multi Step Load](http://img.youtube.com/vi/Aq_yQN9r5eA/0.jpg)](https://www.youtube.com/watch?v=Aq_yQN9r5eA) | [![Inertial Loads](http://img.youtube.com/vi/sMMCUmWgOeY/0.jpg)](https://www.youtube.com/watch?v=sMMCUmWgOeY)|
 
 ---
 ## [Important] clr module
