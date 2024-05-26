@@ -1,4 +1,4 @@
-# Automate the boring stuff in Ansys Mechanical <br> Ansys Python Scripting
+# Automate the boring stuff in Ansys Mechanical <br> Ansys Python Scripting Tutorials
 
 #### Useful Links-
 
@@ -15,14 +15,22 @@
 ---
 ## Ansys & SQL Server
 
+<<<<<<< HEAD
 | 1 Requirements SQL | 2 Data Modelling  | 3 Ansys + SQL Server  |
+=======
+| 1 Requirements  | 2 Data Modelling  | 3 SQL Server  |
+>>>>>>> 2c70d1ae5fb0c841622b751abe61d03d4c2da3f1
 | ------------- | ------------- | ------------- |
-| [![Requirements](http://img.youtube.com/vi/qq7cnxCQRJU/0.jpg)](https://www.youtube.com/watch?v=qq7cnxCQRJU)  | [![Data Modelling](http://img.youtube.com/vi/anPAasBZd6E/0.jpg)](https://www.youtube.com/watch?v=anPAasBZd6E)  | [![Ansys & SQL Server](http://img.youtube.com/vi/az5SfwL3M9A/0.jpg)](https://www.youtube.com/watch?v=az5SfwL3M9A) |
+| [![Requirements](http://img.youtube.com/vi/qq7cnxCQRJU/0.jpg)](https://www.youtube.com/watch?v=qq7cnxCQRJU)  | [![Data Modelling](http://img.youtube.com/vi/anPAasBZd6E/0.jpg)](https://www.youtube.com/watch?v=anPAasBZd6E)  | [![Ansys & SQL Server](http://img.youtube.com/vi/az5SfwL3M9A/0.jpg)](https://www.youtube.com/watch?v=az5SfwL3M9A) 
+
+| 4 MySQL Server  | 5 PostgreSQL  |   |
+| ------------- | ------------- | ------------- |
+| [![MySQL](http://img.youtube.com/vi/NcjWZThRnvQ/0.jpg)](https://www.youtube.com/watch?v=NcjWZThRnvQ)  | [![PostgreSQL](http://img.youtube.com/vi/8sfC5naJMas/0.jpg)](https://www.youtube.com/watch?v=8sfC5naJMas)  |  |
 
 ---
 ## Ansys & Excel
 
-| 1 Excel  | 2 Excel SQL Query |
+| 1 Excel  | 2 SQL like Query on Excel |
 | ------------- | ------------- |
 | [![Excel](http://img.youtube.com/vi/NNLYE-NCKZU/0.jpg)](https://www.youtube.com/watch?v=NNLYE-NCKZU)  | |
 
