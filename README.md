@@ -65,6 +65,10 @@
 | ------------- | ------------- | ------------- |
 | [![Analysis Settings](http://img.youtube.com/vi/QbJNV_M5eko/0.jpg)](https://www.youtube.com/watch?v=QbJNV_M5eko) | [![Multi Step Load](http://img.youtube.com/vi/Aq_yQN9r5eA/0.jpg)](https://www.youtube.com/watch?v=Aq_yQN9r5eA) | [![Inertial Loads](http://img.youtube.com/vi/sMMCUmWgOeY/0.jpg)](https://www.youtube.com/watch?v=sMMCUmWgOeY)|
 
+| 25 Structural Supports | 26 Structural Loads | 27 Bolt Pretension |
+| ------------- | ------------- | ------------- |
+| [![Structural Supports](http://img.youtube.com/vi/qxr8htpxYOs/0.jpg)](https://www.youtube.com/watch?v=qxr8htpxYOs) | [![Structural Loads]| [![Bolt Pretension]|
+
 ---
 ## [Important] clr module
 In IronPython, `clr` is a module allows which you to work with .NET assemblies and interact with .NET objects. `clr.AddReference`, `clr.AddReferenceToFile`, and `clr.AddReferenceToFileAndPath` are methods provided by `clr` to add references to .NET assemblies. The choice of which method to use depends on your specific requirements and the location of the assembly you want to reference.
