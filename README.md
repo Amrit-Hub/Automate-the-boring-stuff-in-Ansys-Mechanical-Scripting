@@ -67,7 +67,7 @@
 
 | 25 Structural Supports | 26 Structural Loads | 27 Bolt Pretension |
 | ------------- | ------------- | ------------- |
-| [![Structural Supports](http://img.youtube.com/vi/qxr8htpxYOs/0.jpg)](https://www.youtube.com/watch?v=qxr8htpxYOs) | [![Structural Loads]| [![Bolt Pretension]|
+| [![Structural Supports](http://img.youtube.com/vi/qxr8htpxYOs/0.jpg)](https://www.youtube.com/watch?v=qxr8htpxYOs) | [![Structural Loads](http://img.youtube.com/vi/sjt_2j2Kgl0/0.jpg)](https://www.youtube.com/watch?v=sjt_2j2Kgl0) | [![Bolt Pretension]|
 
 ---
 ## [Important] clr module
