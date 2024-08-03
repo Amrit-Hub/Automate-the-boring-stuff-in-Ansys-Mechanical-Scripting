@@ -1,0 +1,136 @@
+ExtAPI.DataModel.Project.ProductVersion
+clr.AddReference("Ansys.Mechanical.Application")
+Ansys.Mechanical.Application.ProductInfo.ProductInfoAsString
+ExtAPI.DataModel.Project.ProductVersion
+clr.AddReference("Ansys.Mechanical.Application")
+Ansys.Mechanical.Application.ProductInfo.ProductInfoAsString
+ExtAPI.DataModel.Project.ProjectDirectory
+ExtAPI.DataModel.Project.ProjectDirectory
+import pymechanical_helpers
+pymechanical_helpers.GetAllProjectFiles(ExtAPI)
+
+geomImport = Model.GeometryImportGroup.AddGeometryImport()
+# Format of Geometry file
+geomImport_format = Ansys.Mechanical.DataModel.Enums.GeometryImportPreference.Format.Automatic
+
+#Preferences for Geometry file
+geomImport_preferences = Ansys.ACT.Mechanical.Utilities.GeometryImportPreferences()
+
+# geomImport_preferences.ProcessSolids = True
+# geomImport_preferences.ProcessSurfaces = False
+# geomImport_preferences.ProcessLines = False
+
+# geomImport_preferences.ProcessNamedSelections = True
+# geomImport_preferences.NamedSelectionKey = "NSel"
+
+# geomImport_preferences.ProcessMaterialProperties = True
+# geomImport_preferences.MixedImportResolution = GeometryImportPreference.MixedImportResolution.Solid
+
+# geomImport_preferences.ProcessCoordinateSystems = True
+# geomImport_preferences.CoordinateSystemKey = "CSys"
+geomImport.Import(r'D:\repos\AnsysScripting\WIP\pyMechanical\geom.scdoc', geomImport_format, geomImport_preferences)
+
+geomImport.ToString()
+
+connections = Model.Connections.AddConnectionGroup()
+connections.CreateAutomaticConnections()
+
+
+mesh = Model.Mesh
+mesh.GenerateMesh()
+
+
+selinfo = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+ns_faceForce = Model.AddNamedSelection()
+ns_faceForce.Name = "ns_faceForce"
+selinfo.Ids = [35]
+ns_faceForce.Location = selinfo
+ns_faceFixedSupport = Model.AddNamedSelection()
+ns_faceFixedSupport.Name = "ns_faceFixedSupport"
+selinfo.Ids = [11]
+ns_faceFixedSupport.Location = selinfo
+
+
+analysis = Model.AddStaticStructuralAnalysis()
+fixedsupport = analysis.AddFixedSupport()
+fixedsupport.Location = ns_faceFixedSupport
+force = analysis.AddForce()
+force.Location = ns_faceForce
+force.Magnitude.Inputs[0].DiscreteValues = [Quantity('0 [sec]'),Quantity('1 [sec]')]
+force.Magnitude.Output.DiscreteValues = [Quantity('0 [N]'),Quantity('100 [N]')]
+
+analysis.Solve()
+
+solution = analysis.Solution
+totalDeformation = solution.AddTotalDeformation()
+totalDeformation.Location = ns_faceForce
+solution.EvaluateAllResults()
+
+ExtAPI.DataModel.Project.Save(r'D:\repos\AnsysScripting\WIP\pyMechanical\pymech.mechdb')
+
+ExtAPI.DataModel.Project.ProductVersion
+clr.AddReference("Ansys.Mechanical.Application")
+Ansys.Mechanical.Application.ProductInfo.ProductInfoAsString
+ExtAPI.DataModel.Project.Open(r"D:\repos\AnsysScripting\WIP\pyMechanical\pymech.mechdb")
+ExtAPI.DataModel.Project.ProductVersion
+clr.AddReference("Ansys.Mechanical.Application")
+Ansys.Mechanical.Application.ProductInfo.ProductInfoAsString
+ExtAPI.DataModel.Project.ForceUnlock(r"D:\repos\AnsysScripting\WIP\pyMechanical\pymech.mechdb")
+ExtAPI.DataModel.Project.Open(r"D:\repos\AnsysScripting\WIP\pyMechanical\pymech.mechdb")
+
+geomImport = Model.GeometryImportGroup.AddGeometryImport()
+# Format of Geometry file
+geomImport_format = Ansys.Mechanical.DataModel.Enums.GeometryImportPreference.Format.Automatic
+
+#Preferences for Geometry file
+geomImport_preferences = Ansys.ACT.Mechanical.Utilities.GeometryImportPreferences()
+
+# geomImport_preferences.ProcessSolids = True
+# geomImport_preferences.ProcessSurfaces = False
+# geomImport_preferences.ProcessLines = False
+
+# geomImport_preferences.ProcessNamedSelections = True
+# geomImport_preferences.NamedSelectionKey = "NSel"
+
+# geomImport_preferences.ProcessMaterialProperties = True
+# geomImport_preferences.MixedImportResolution = GeometryImportPreference.MixedImportResolution.Solid
+
+# geomImport_preferences.ProcessCoordinateSystems = True
+# geomImport_preferences.CoordinateSystemKey = "CSys"
+geomImport.Import(r'D:\repos\AnsysScripting\WIP\pyMechanical\geom.scdoc', geomImport_format, geomImport_preferences)
+
+
+connections = Model.Connections.AddConnectionGroup()
+connections.CreateAutomaticConnections()
+
+
+mesh = Model.Mesh
+mesh.GenerateMesh()
+
+
+selinfo = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+ns_faceForce = Model.AddNamedSelection()
+ns_faceForce.Name = "ns_faceForce"
+selinfo.Ids = [35]
+ns_faceForce.Location = selinfo
+ns_faceFixedSupport = Model.AddNamedSelection()
+ns_faceFixedSupport.Name = "ns_faceFixedSupport"
+selinfo.Ids = [11]
+ns_faceFixedSupport.Location = selinfo
+
+
+analysis = Model.AddStaticStructuralAnalysis()
+fixedsupport = analysis.AddFixedSupport()
+fixedsupport.Location = ns_faceFixedSupport
+force = analysis.AddForce()
+force.Location = ns_faceForce
+force.Magnitude.Inputs[0].DiscreteValues = [Quantity('0 [sec]'),Quantity('1 [sec]')]
+force.Magnitude.Output.DiscreteValues = [Quantity('0 [N]'),Quantity('100 [N]')]
+
+analysis.Solve()
+
+solution = analysis.Solution
+totalDeformation = solution.AddTotalDeformation()
+totalDeformation.Location = ns_faceForce
+solution.EvaluateAllResults()
+
