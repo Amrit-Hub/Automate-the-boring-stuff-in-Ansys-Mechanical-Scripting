@@ -8,9 +8,9 @@
 ---
 ## Utilities
 
-| Send analysis update emails from Ansys |
-|---------|
-| [![Send Email](http://img.youtube.com/vi/okAIJ1bCn-Y/0.jpg)](https://www.youtube.com/watch?v=okAIJ1bCn-Y) |
+| Send analysis update emails from Ansys | pyMechanical
+|---------|---------|
+| [![Send Email](http://img.youtube.com/vi/okAIJ1bCn-Y/0.jpg)](https://www.youtube.com/watch?v=okAIJ1bCn-Y) | [![pyMechanical](http://img.youtube.com/vi/30iFGvFH07I/0.jpg)](https://www.youtube.com/watch?v=30iFGvFH07I) |
 
 ---
 ## Ansys & SQL Server
@@ -67,7 +67,15 @@
 
 | 25 Structural Supports | 26 Structural Loads | 27 Bolt Pretension |
 | ------------- | ------------- | ------------- |
-| [![Structural Supports](http://img.youtube.com/vi/qxr8htpxYOs/0.jpg)](https://www.youtube.com/watch?v=qxr8htpxYOs) | [![Structural Loads](http://img.youtube.com/vi/sjt_2j2Kgl0/0.jpg)](https://www.youtube.com/watch?v=sjt_2j2Kgl0) | [![Bolt Pretension]|
+| [![Structural Supports](http://img.youtube.com/vi/qxr8htpxYOs/0.jpg)](https://www.youtube.com/watch?v=qxr8htpxYOs) | [![Structural Loads](http://img.youtube.com/vi/sjt_2j2Kgl0/0.jpg)](https://www.youtube.com/watch?v=sjt_2j2Kgl0) | [![Bolt Pretension](http://img.youtube.com/vi/T0OY9POq8Gc/0.jpg)](https://www.youtube.com/watch?v=T0OY9POq8Gc) |
+
+| 28 Solutions & Results | 29 Export Graphics Pane | 30 Export Tabular Pane |
+| ------------- | ------------- | ------------- |
+| [![Solutions & Results](http://img.youtube.com/vi/meZNe8v8Tlk/0.jpg)](https://www.youtube.com/watch?v=meZNe8v8Tlk) | [![Export Graphics Pane](http://img.youtube.com/vi/kzZJMQAxanM/0.jpg)](https://www.youtube.com/watch?v=kzZJMQAxanM) | [![Export Tabular Pane](http://img.youtube.com/vi/K7RHb35QNhI/0.jpg)](https://www.youtube.com/watch?v=K7RHb35QNhI) |
+
+| 31 Export Worksheet Pane | 32 Export Graph Pane | 33 Graphics |
+| ------------- | ------------- | ------------- |
+| [![Export Worksheet Pane](http://img.youtube.com/vi/fwu3h4AOn60/0.jpg)](https://www.youtube.com/watch?v=fwu3h4AOn60) | [![Export Graph Pane](http://img.youtube.com/vi/u570KsOnsjQ/0.jpg)](https://www.youtube.com/watch?v=u570KsOnsjQ) | [![Graphics]|
 
 ---
 ## [Important] clr module
